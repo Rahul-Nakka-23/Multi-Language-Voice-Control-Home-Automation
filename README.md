@@ -1,4 +1,4 @@
-# 🏠 Home Automation App
+# 🏠 Multi-Language-Voice-Control-Home-Automation
 
 An Android app to control home appliances (bulbs, fans, etc.) via Raspberry Pi using voice commands and mobile controls.  
 The project supports **multilingual voice input** (English, Hindi, Telugu, Kannada) and provides a clean mobile UI to toggle loads individually or all at once.
