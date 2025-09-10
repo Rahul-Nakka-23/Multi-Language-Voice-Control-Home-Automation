@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ipInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Raspberry Pi IP (e.g. 192.168.1.50)"
+        app:boxStrokeWidth="1dp"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+        app:layout_constraintHorizontal_bias="0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toTopOf="@id/ipInputLayout"
+        app:layout_constraintBottom_toBottomOf="@id/ipInputLayout"
+        app:layout_constraintStart_toEndOf="@id/ipInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Buttons grid -->
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/ipInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/allControls">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad1On"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 1 On"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad1Off"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 1 Off"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad2On"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 2 On"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad2Off"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 2 Off"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad3On"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 3 On"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad3Off"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 3 Off"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad4On"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 4 On"
+            android:layout_columnWeight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoad4Off"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load 4 Off"
+            android:layout_columnWeight="1"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/allControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAllOn"
+            style="?attr/materialButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All On"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAllOff"
+            style="?attr/materialButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All Off"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
